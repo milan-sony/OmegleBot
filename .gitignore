@@ -1,0 +1,11 @@
+.env
+*.log
+*.pot
+*.pyc
+__pycache__
+__pycache__/
+venv
+/venv
+venv/
+.vscode
+.vscode/settings.json
