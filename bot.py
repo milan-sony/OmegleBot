@@ -9,6 +9,9 @@ from time import sleep
 from topics import topics_list
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
 
 # To stop chrome from automatically closing
 options = webdriver.ChromeOptions()
@@ -52,6 +55,34 @@ def checkbox():
   # Click on Confirm and Continue button
   confirmbtn = driver.find_element(By.XPATH, "/html/body/div[7]/div/p[3]/input")
   confirmbtn.click()
+
+# Completing recaptcha
+# """no code is written. If recaptcha occurs, clear it manually"""
+
+# Checking whether textbox is enabled or not
+def checktextbox():
+  textbox_path = driver.find_element(By.CSS_SELECTOR, 'textarea.chatmsg')
+  if textbox_path.is_enabled(): 
+    # is_enabled is used to check whether the element is enabled or not
+    print("Textbox path is enabled")
+    print("Redirected to sendmsg() from checktextbox()")
+    send_message()
+  else:
+    print("Textbox path is disabled")
+    try:
+      textbox_disabled = WebDriverWait(driver, 500).until(
+          EC.invisibility_of_element_located((By.CSS_SELECTOR, 'textarea.disabled')) 
+          # invisibility_of_element_located is used to waite until the element is removed (invisibility_of_element_located returns a boolean value)
+        )
+      if textbox_disabled is True:
+        print(textbox_disabled)
+        print("Redirected to sndmsg() from checktextbox()")
+        send_message()
+      else:
+        print("Something went wrong with the textbox_disabled")
+    except StaleElementReferenceException:
+      print("Textbox is not showing StaleElementReferenceException is executed")
+      checktextbox()
 
 
 # Function Call
