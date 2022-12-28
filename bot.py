@@ -84,8 +84,19 @@ def checktextbox():
       print("Textbox is not showing StaleElementReferenceException is executed")
       checktextbox()
 
+# Function to send message
+def send_message():
+  textbox_path = driver.find_element(By.CSS_SELECTOR, 'textarea.chatmsg')
+  textbox_path.send_keys("M ♂️ or F ♀️")
+  # message send button
+  msgsend_btn = driver.find_element(By.CSS_SELECTOR, "button.sendbtn")
+  msgsend_btn.click()
+  print("Asked stranger M of F")
+  print("Redirected to checktext() from sendmsg()")
+  checktext()
 
 # Function Call
 topics()
 textbtn()
 checkbox()
+checktextbox()
