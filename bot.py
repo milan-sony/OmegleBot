@@ -39,7 +39,22 @@ def textbtn():
   textbtn.click()
   sleep(1)
 
+# Click on pop up checkboxes and confirm button after clicking the textbtn
+def checkbox():
+  # Tick on checkbox 1
+  checkbox = driver.find_element(By.XPATH, "/html/body/div[7]/div/p[1]/label/input")
+  checkbox.click()
+  sleep(1)
+  # Tick on checkbox 2
+  checkbox = driver.find_element(By.XPATH, "/html/body/div[7]/div/p[2]/label/input")
+  checkbox.click()
+  sleep(1)
+  # Click on Confirm and Continue button
+  confirmbtn = driver.find_element(By.XPATH, "/html/body/div[7]/div/p[3]/input")
+  confirmbtn.click()
+
 
 # Function Call
 topics()
 textbtn()
+checkbox()
