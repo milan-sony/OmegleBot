@@ -1,1 +1,1 @@
-new_topics = ['kerala']
+topics = ['kerala']

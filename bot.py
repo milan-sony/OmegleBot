@@ -6,7 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
-from topics import new_topics
+from topics import topics
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
@@ -28,7 +28,7 @@ sleep(2)
 # Adding topics to talk about from topics.py
 def topics():
   newtopicinput = driver.find_element(By.CLASS_NAME, "newtopicinput")
-  for topics in new_topics:
-    newtopicinput.send_keys(topics)
+  for topic in topics:
+    newtopicinput.send_keys(topic)
     newtopicinput.send_keys(Keys.ENTER) 
     sleep(1)
