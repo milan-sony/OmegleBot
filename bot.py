@@ -33,5 +33,13 @@ def topics():
     newtopicinput.send_keys(Keys.ENTER) 
     sleep(1)
 
+# Click on text button after entering topics
+def textbtn():
+  textbtn = driver.find_element(By.ID, "textbtn")
+  textbtn.click()
+  sleep(1)
+
+
 # Function Call
 topics()
+textbtn()
