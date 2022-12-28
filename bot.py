@@ -95,6 +95,39 @@ def send_message():
   print("Redirected to checktext() from sendmsg()")
   checktext()
 
+# Check text
+def checktext():
+  # global strangertext_path
+  print("Entered to checktext fun()")
+  try:
+    strangertext_path = WebDriverWait(driver, 10).until(
+      # stranger message path
+      EC.visibility_of_element_located((By.XPATH, "/html/body/div[5]/div/div/div[1]/div[1]/div/div[4]/p/span"))
+      # /html/body/div[6]/div/div/div[1]/div[1]/div/div[5]/p/span
+    )
+  except TimeoutException:
+    print("Stranger not replied for 10 sec")
+    print("Redirected to strangerdisconnect() from checktext()")
+    strangerdisconnect()
+  strangermsg = strangertext_path.text
+  print("Stranger says : " + strangermsg)
+  if (strangermsg == 'F' or strangermsg == 'f' or strangermsg == 'Hai F' or strangermsg == 'hai F' or strangermsg == 'Hai f' or strangermsg == 'hai f' or strangermsg == '.F' or strangermsg == '.f' or strangermsg == 'F.' or strangermsg == 'f.' or strangermsg == 'Hi F' or strangermsg == 'hi F' or strangermsg == 'Hi f' or strangermsg == 'hi f' or strangermsg == 'Hai F' or strangermsg == 'Hai f' or strangermsg == 'hai F' or strangermsg == 'hai f' or strangermsg == 'F Here' or strangermsg == 'F here' or strangermsg == 'f Here' or strangermsg == 'f here'):
+    playsound('beep_beep.mp3')
+    print("An F found")
+    sleep(300)
+  elif (strangermsg == 'M' or strangermsg == 'm' or strangermsg == '.M' or strangermsg == '.m' or strangermsg == 'M.' or strangermsg == 'm.' or strangermsg == 'Hai m' or strangermsg == 'Hai M' or strangermsg == 'hai M' or strangermsg == 'hai m' or strangermsg == 'Hi M' or strangermsg == 'Hi m' or strangermsg == 'hi M' or strangermsg == 'hi m' or strangermsg == 'Helo M' or strangermsg == 'Helo m' or strangermsg == 'helo M' or strangermsg == 'helo m' or strangermsg == 'Hello M' or strangermsg == 'Hello m' or strangermsg == 'hello M' or strangermsg == 'hello m' or strangermsg == 'M Here' or strangermsg == 'M here' or strangermsg == 'm Here' or strangermsg == 'm here'):
+    disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
+    action = ActionChains(driver)
+    for i in range(3):
+      action.move_to_element(disconnect_btn).click()
+      action.perform()
+    print("Disconnected M found")
+    print("Redirected to checktextbox()")
+    checktextbox()
+  else:
+    print("Redirected to whoami() from checktext()")
+    whoami()
+
 # Function Call
 topics()
 textbtn()
