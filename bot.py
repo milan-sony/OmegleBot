@@ -12,6 +12,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
+from selenium.webdriver import ActionChains
+from playsound import playsound
 
 # To stop chrome from automatically closing
 options = webdriver.ChromeOptions()
@@ -127,6 +129,19 @@ def checktext():
   else:
     print("Redirected to whoami() from checktext()")
     whoami()
+
+# Reply to stranger if the 2nd Message is not expected message 
+def whoami():
+  print("Entered to who am i function()")
+  textbox_path = driver.find_element(By.CSS_SELECTOR, 'textarea.chatmsg')
+  textbox_path.send_keys("M")
+  print("You says M")
+  # message send button
+  msgsend_btn = driver.find_element(By.CSS_SELECTOR, "button.sendbtn")
+  msgsend_btn.click()
+  sleep(5)
+  print("Redirected to stranger disconnect()")
+  strangerdisconnect()
 
 # Function Call
 topics()
