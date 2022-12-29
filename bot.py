@@ -143,6 +143,20 @@ def whoami():
   print("Redirected to stranger disconnect()")
   strangerdisconnect()
 
+# Check whether a stranger disconnected or not
+def strangerdisconnect():
+  try:
+    WebDriverWait(driver, 10).until(
+      EC.visibility_of_all_elements_located((By.CLASS_NAME, 'newchatbtnwrapper'))
+    )
+    print("strangerdisconnected redirected to disconnect_btn()")
+    disconnet_btn()
+  
+  except TimeoutException:
+    print(TimeoutException)
+    print("Strangerdisconnect path not found timeout redirected to disconnect_btn()")
+    disconnet_btn()
+
 # Function Call
 topics()
 textbtn()
