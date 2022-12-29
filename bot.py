@@ -5,9 +5,9 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 from time import sleep
 from topics import topics_list
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -26,11 +26,11 @@ driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverMan
 link = 'https://www.omegle.com/'
 
 # Maximize browser window
-driver.maximize_window()
+# driver.maximize_window()
 driver.get(link)
 sleep(2)
 
-# Adding topics to talk about from topics.py
+# Getting topics from topics.py
 def topics():
   newtopicinput = driver.find_element(By.CLASS_NAME, "newtopicinput")
   for topics in topics_list:
@@ -38,13 +38,13 @@ def topics():
     newtopicinput.send_keys(Keys.ENTER) 
     sleep(1)
 
-# Click on text button after entering topics
+# Click text button
 def textbtn():
   textbtn = driver.find_element(By.ID, "textbtn")
   textbtn.click()
   sleep(1)
 
-# Click on pop up checkboxes and confirm button after clicking the textbtn
+# Click on pop up checkboxes and confirm button
 def checkbox():
   # Tick on checkbox 1
   checkbox = driver.find_element(By.XPATH, "/html/body/div[7]/div/p[1]/label/input")
@@ -59,7 +59,7 @@ def checkbox():
   confirmbtn.click()
 
 # Completing recaptcha
-# """no code is written. If recaptcha occurs, clear it manually"""
+# """no code is written"""
 
 # Checking whether textbox is enabled or not
 def checktextbox():
@@ -86,6 +86,7 @@ def checktextbox():
       print("Textbox is not showing StaleElementReferenceException is executed")
       checktextbox()
 
+
 # Function to send message
 def send_message():
   textbox_path = driver.find_element(By.CSS_SELECTOR, 'textarea.chatmsg')
@@ -106,6 +107,7 @@ def disconnet_btn():
     action.perform()
     print("Redirected to checktextbox() from disconnect()")
   checktextbox()
+
 
 # Check text
 def checktext():
@@ -140,7 +142,6 @@ def checktext():
     print("Redirected to whoami() from checktext()")
     whoami()
 
-# Reply to stranger if the 2nd Message is not expected message 
 def whoami():
   print("Entered to who am i function()")
   textbox_path = driver.find_element(By.CSS_SELECTOR, 'textarea.chatmsg')
@@ -167,9 +168,12 @@ def strangerdisconnect():
     print("Strangerdisconnect path not found timeout redirected to disconnect_btn()")
     disconnet_btn()
 
-# Function Call
 topics()
 textbtn()
 checkbox()
 checktextbox()
 strangerdisconnect()
+
+
+"""If this ERROR occurs:-         [10372:2488:1228/083258.617:ERROR:gpu_init.cc(457)] Passthrough is not supported, GL is disabled, ANGLE is          """
+# Link: https://stackoverflow.com/questions/67501093/passthrough-is-not-supported-gl-is-disabled
