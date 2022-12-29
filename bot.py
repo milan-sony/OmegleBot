@@ -97,6 +97,16 @@ def send_message():
   print("Redirected to checktext() from sendmsg()")
   checktext()
 
+# Function to click disconnect button
+def disconnet_btn():
+  disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
+  action = ActionChains(driver)
+  for i in range(3):
+    action.move_to_element(disconnect_btn).click()
+    action.perform()
+    print("Redirected to checktextbox() from disconnect()")
+  checktextbox()
+
 # Check text
 def checktext():
   # global strangertext_path
@@ -162,3 +172,4 @@ topics()
 textbtn()
 checkbox()
 checktextbox()
+strangerdisconnect()
