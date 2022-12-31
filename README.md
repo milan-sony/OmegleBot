@@ -56,19 +56,29 @@ Now run the script
 
 Now sit back and enjoy, let the bot do the work
 
-
-
 ## Working
 
 This bot works in such a way that
 
 1st it will take the topics from topics.py and add this topics to talk about section on omegle (Topics can be added by the user in topics.py file)
 
+<img src="screenshots/img1.png">
+
+<img src="screenshots/img2.png">
+
 If reCAPTCHA occurs get rid of it by yourself
 
 Then the bot will ask the stranger whether he/she is M or F (Male or Female)
 
+<img src="screenshots/img3.png">
+
 If responce of the stranger is M (Male) it will skip the stranger 
+
+<img src="screenshots/img4.png">
+
+If the stranger skips without answering anything the bot will waite for 10 sec and skips
+
+<img src="screenshots/img5.png">
 
 If the responce of the stranger is F (Female) it will make a beep sound and the bot will sleep for 5 min and it will stop execution (time can be changed in the program)
 
