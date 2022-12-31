@@ -12,7 +12,7 @@ You will need to install Python on  you system. Head over to https://www.python.
 (Dont Forget to Tick Add to Path while installing Python)
 
 Once you have downloaded Python on your system, 
-run the following command inside your terminal (If your stytem is git enabled, otherwise download the zip file and extract it)
+run the following command inside your terminal (If your system is git enabled, otherwise download the zip file and extract it)
 
 ```bash
   git clone https://github.com/milan-sony/Omegle_Chatbot.git
