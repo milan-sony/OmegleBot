@@ -1,8 +1,12 @@
 # Omegle Chatbot
 
-An Omegle chatbot🤖 using <a href = "https://selenium-python.readthedocs.io/">selenium</a> to send text message
+An omegle chatbot🤖 especially for boys to find F (those who use omgele will get it fast) using selenium on chrome web browser
 
-## Run Locally
+## Read documentation about selenium
+
+<a href = "https://selenium-python.readthedocs.io/">selenium</a>
+
+## Run locally
 
 You will need to install Python on  you system. Head over to https://www.python.org/downloads/ to download python.
 (Dont Forget to Tick Add to Path while installing Python)
@@ -51,3 +55,18 @@ Now run the script
 ```
 
 Now sit back and enjoy, let the bot do the work
+
+
+## Working
+
+This bot works in such a way that
+
+1st it will ask the stranger whether he/she is M or F (Male or Female)
+
+Then if responce of the stranger is M (Male) it will skip the stranger 
+
+If the responce of the stranger is F (Female) it will make a beep sound and the bot will sleep for 5 min and it will stop execution (time can be changed in the program)
+
+If stranger (F) skips you, you have to run the code again
+
+Actually it's not 100% accurate there may be some faults while running the program
