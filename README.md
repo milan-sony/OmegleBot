@@ -76,7 +76,7 @@ If responce of the stranger is M (Male) it will skip the stranger
 
 <img src="screenshots/img4.png">
 
-If the stranger skips without answering anything the bot will waite for 10 sec and skips
+If the stranger skips without answering anything the bot will wait for 10 sec and skips
 
 <img src="screenshots/img5.png">
 
