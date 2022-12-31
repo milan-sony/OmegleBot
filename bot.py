@@ -105,7 +105,7 @@ def disconnet_btn():
   for i in range(3):
     action.move_to_element(disconnect_btn).click()
     action.perform()
-  print("Redirected to checktextbox() from disconnect()")
+    print("Redirected to checktextbox() from disconnect()")
   checktextbox()
 
 
