@@ -64,6 +64,8 @@ This bot works in such a way that
 
 1st it will take the topics from topics.py and add this topics to talk about section on omegle (Topics can be added by the user in topics.py file)
 
+If reCAPTCHA occurs get rid of it by yourself
+
 Then the bot will ask the stranger whether he/she is M or F (Male or Female)
 
 If responce of the stranger is M (Male) it will skip the stranger 
