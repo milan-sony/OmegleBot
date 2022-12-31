@@ -4,7 +4,7 @@ An omegle chatbot🤖 especially for boys to find F (those who use omgele will g
 
 ## Read documentation about selenium
 
-<a href = "https://selenium-python.readthedocs.io/">selenium</a>
+<a href = "https://selenium-python.readthedocs.io/">Selenium</a>
 
 ## Run locally
 
@@ -57,16 +57,23 @@ Now run the script
 Now sit back and enjoy, let the bot do the work
 
 
+
 ## Working
 
 This bot works in such a way that
 
-1st it will ask the stranger whether he/she is M or F (Male or Female)
+1st it will get the topics from topics.py and it will add the topics to talk about textbox on omegle (Topics can be added by the user in topics.py file)
 
-Then if responce of the stranger is M (Male) it will skip the stranger 
+Then the bot will ask the stranger whether he/she is M or F (Male or Female)
+
+If responce of the stranger is M (Male) it will skip the stranger 
 
 If the responce of the stranger is F (Female) it will make a beep sound and the bot will sleep for 5 min and it will stop execution (time can be changed in the program)
 
 If stranger (F) skips you, you have to run the code again
+
+### Points to be noted
+
+You can change the messages according to your need
 
 Actually it's not 100% accurate there may be some faults while running the program
