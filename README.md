@@ -62,7 +62,7 @@ Now sit back and enjoy, let the bot do the work
 
 This bot works in such a way that
 
-1st it will get the topics from topics.py and it will add the topics to talk about textbox on omegle (Topics can be added by the user in topics.py file)
+1st it will take the topics from topics.py and add the topics to talk about textbox on omegle (Topics can be added by the user in topics.py file)
 
 Then the bot will ask the stranger whether he/she is M or F (Male or Female)
 
