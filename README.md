@@ -84,8 +84,12 @@ If the responce of the stranger is F (Female) it will make a beep sound and the 
 
 If stranger (F) skips you, you have to run the code again
 
-### Points to be noted
+## Points to be noted
 
 You can change the messages according to your need
 
-Actually it's not 100% accurate there may be some faults while running the program
+Actually it's not 100% accurate there may be some faults while running the program (If any error occurs exit the code and run again)
+
+## Future updates
+
+- Add NLP
