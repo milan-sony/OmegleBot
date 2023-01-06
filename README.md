@@ -92,4 +92,4 @@ Actually it's not 100% accurate there may be some faults while running the progr
 
 ## Future updates
 
-- Add NLP
+- May add [Natural language processing](https://www.github.com/octokatherine)
