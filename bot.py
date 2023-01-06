@@ -26,7 +26,7 @@ driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverMan
 link = 'https://www.omegle.com/'
 
 # Maximize browser window
-# driver.maximize_window()
+driver.maximize_window()
 driver.get(link)
 sleep(2)
 
@@ -86,7 +86,6 @@ def checktextbox():
       print("Textbox is not showing StaleElementReferenceException is executed")
       checktextbox()
 
-
 # Function to send message
 def send_message():
   textbox_path = driver.find_element(By.CSS_SELECTOR, 'textarea.chatmsg')
@@ -108,7 +107,6 @@ def disconnet_btn():
     print("Redirected to checktextbox() from disconnect()")
   checktextbox()
 
-
 # Check text
 def checktext():
   # global strangertext_path
@@ -117,7 +115,6 @@ def checktext():
     strangertext_path = WebDriverWait(driver, 10).until(
       # stranger message path
       EC.visibility_of_element_located((By.XPATH, "/html/body/div[5]/div/div/div[1]/div[1]/div/div[4]/p/span"))
-      # /html/body/div[6]/div/div/div[1]/div[1]/div/div[5]/p/span
     )
   except TimeoutException:
     print("Stranger not replied for 10 sec")
@@ -173,7 +170,3 @@ textbtn()
 checkbox()
 checktextbox()
 strangerdisconnect()
-
-
-"""If this ERROR occurs:-         [10372:2488:1228/083258.617:ERROR:gpu_init.cc(457)] Passthrough is not supported, GL is disabled, ANGLE is          """
-# Link: https://stackoverflow.com/questions/67501093/passthrough-is-not-supported-gl-is-disabled
