@@ -92,4 +92,4 @@ Actually it's not 100% accurate there may be some faults while running the progr
 
 ## Future updates
 
-- May add [Natural language processing](https://www.github.com/octokatherine)
+- May add [Natural language processing](https://www.ibm.com/in-en/topics/natural-language-processing#:~:text=Natural%20language%20processing%20(NLP)%20refers,same%20way%20human%20beings%20can.)
