@@ -8,11 +8,11 @@ An omegle chatbot🤖 especially for boys to find F (those who use omgele will g
 
 ## Run locally
 
-You will need to install Python on  you system. Head over to https://www.python.org/downloads/ to download python.
-(Dont Forget to Tick Add to Path while installing Python)
+You will need to install Python on you system, head over to https://www.python.org/downloads/ to download python.
+(Dont Forget to tick Add Python to PATH while installing Python)
 
 Once you have downloaded Python on your system, 
-run the following command inside your terminal (If your system is git enabled, otherwise download the zip file and extract it)
+run the following command inside your terminal (only if your system is git enabled, otherwise download the zip file and extract it)
 
 ```bash
   git clone https://github.com/milan-sony/Omegle_Chatbot.git
@@ -40,6 +40,12 @@ If error occurs when activating virtual environment, run the following command
 
 ```bash
   Set-ExecutionPolicy Unrestricted
+```
+
+or
+
+```bash
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 ```
 
 Install the dependencies needed for this project
