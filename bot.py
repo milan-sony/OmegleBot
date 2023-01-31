@@ -122,10 +122,12 @@ def checktext():
     strangerdisconnect()
   strangermsg = strangertext_path.text
   print("Stranger says : " + strangermsg)
-  if (strangermsg == 'F' or strangermsg == 'f' or strangermsg == 'Hai F' or strangermsg == 'hai F' or strangermsg == 'Hai f' or strangermsg == 'hai f' or strangermsg == '.F' or strangermsg == '.f' or strangermsg == 'F.' or strangermsg == 'f.' or strangermsg == 'Hi F' or strangermsg == 'hi F' or strangermsg == 'Hi f' or strangermsg == 'hi f' or strangermsg == 'Hai F' or strangermsg == 'Hai f' or strangermsg == 'hai F' or strangermsg == 'hai f' or strangermsg == 'F Here' or strangermsg == 'F here' or strangermsg == 'f Here' or strangermsg == 'f here'):
+  if (strangermsg == 'F' or strangermsg == 'f' or strangermsg == 'Hai F' or strangermsg == 'hai F' or strangermsg == 'Hai f' or strangermsg == 'hai f' or strangermsg == '.F' or strangermsg == '.f' or strangermsg == 'F.' or strangermsg == 'f.' or strangermsg == 'Hi F' or strangermsg == 'hi F' or strangermsg == 'Hi f' or strangermsg == 'hi f' or strangermsg == 'Hai F' or strangermsg == 'Hai f' or strangermsg == 'hai F' or strangermsg == 'hai f' or strangermsg == 'F Here' or strangermsg == 'F here' or strangermsg == 'f Here' or strangermsg == 'f here' or strangermsg == '♀️' or strangermsg == 'F ♀️' or strangermsg == 'f♀️' or strangermsg == 'F♀️'):
     playsound('beep_beep.mp3')
     print("An F found")
-    sleep(300)
+    exit()
+  elif(strangermsg == 'Hai' or strangermsg == 'hi'):
+    whoami()
   elif (strangermsg == 'M' or strangermsg == 'm' or strangermsg == '.M' or strangermsg == '.m' or strangermsg == 'M.' or strangermsg == 'm.' or strangermsg == 'Hai m' or strangermsg == 'Hai M' or strangermsg == 'hai M' or strangermsg == 'hai m' or strangermsg == 'Hi M' or strangermsg == 'Hi m' or strangermsg == 'hi M' or strangermsg == 'hi m' or strangermsg == 'Helo M' or strangermsg == 'Helo m' or strangermsg == 'helo M' or strangermsg == 'helo m' or strangermsg == 'Hello M' or strangermsg == 'Hello m' or strangermsg == 'hello M' or strangermsg == 'hello m' or strangermsg == 'M Here' or strangermsg == 'M here' or strangermsg == 'm Here' or strangermsg == 'm here'):
     disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
     action = ActionChains(driver)
@@ -169,4 +171,4 @@ topics()
 textbtn()
 checkbox()
 checktextbox()
-strangerdisconnect()
+# strangerdisconnect()
