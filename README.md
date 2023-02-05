@@ -15,7 +15,7 @@ Once you have downloaded Python on your system,
 run the following command inside your terminal (only if your system is git enabled, otherwise download the zip file and extract it)
 
 ```bash
-  git clone https://github.com/milan-sony/Omegle_Chatbot.git
+  git clone https://github.com/milan-sony/omegle_chatbot.git
 ```
 
 Then go to the project folder
