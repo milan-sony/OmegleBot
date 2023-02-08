@@ -121,14 +121,15 @@ def checktext():
     print("Redirected to strangerdisconnect() from checktext()")
     strangerdisconnect()
   strangermsg = strangertext_path.text
-  print("Stranger says : " + strangermsg)
-  if (strangermsg == 'F' or strangermsg == 'f' or strangermsg == 'Hai F' or strangermsg == 'hai F' or strangermsg == 'Hai f' or strangermsg == 'hai f' or strangermsg == '.F' or strangermsg == '.f' or strangermsg == 'F.' or strangermsg == 'f.' or strangermsg == 'Hi F' or strangermsg == 'hi F' or strangermsg == 'Hi f' or strangermsg == 'hi f' or strangermsg == 'Hai F' or strangermsg == 'Hai f' or strangermsg == 'hai F' or strangermsg == 'hai f' or strangermsg == 'F Here' or strangermsg == 'F here' or strangermsg == 'f Here' or strangermsg == 'f here' or strangermsg == '♀️' or strangermsg == 'F ♀️' or strangermsg == 'f♀️' or strangermsg == 'F♀️'):
+  strangermsglower = strangermsg.lower()
+  print("Stranger says : " + strangermsglower)
+  if (strangermsglower == 'f' or strangermsglower == 'hai f' or strangermsglower == 'f hai' or strangermsglower == 'f here' or strangermsglower == 'hello f' or strangermsglower == 'helo f' or strangermsglower == '.f' or strangermsglower == 'f.' or strangermsglower == 'hi f' or strangermsglower == 'f hi' or strangermsglower == 'f,hai' or strangermsglower == 'f, hai' or strangermsglower == 'f,hi' or strangermsglower == 'f, hi' or strangermsglower == 'f here' or strangermsglower == '♀️' or strangermsglower == 'f ♀️' or strangermsglower == '♀️ f'):
     playsound('beep_beep.mp3')
     print("An F found")
     exit()
-  elif(strangermsg == 'Hai' or strangermsg == 'hi'):
+  elif(strangermsglower == 'hai' or strangermsglower == 'hi' or strangermsglower == 'hello' == strangermsglower == 'hey'):
     whoami()
-  elif (strangermsg == 'M' or strangermsg == 'm' or strangermsg == '.M' or strangermsg == '.m' or strangermsg == 'M.' or strangermsg == 'm.' or strangermsg == 'Hai m' or strangermsg == 'Hai M' or strangermsg == 'hai M' or strangermsg == 'hai m' or strangermsg == 'Hi M' or strangermsg == 'Hi m' or strangermsg == 'hi M' or strangermsg == 'hi m' or strangermsg == 'Helo M' or strangermsg == 'Helo m' or strangermsg == 'helo M' or strangermsg == 'helo m' or strangermsg == 'Hello M' or strangermsg == 'Hello m' or strangermsg == 'hello M' or strangermsg == 'hello m' or strangermsg == 'M Here' or strangermsg == 'M here' or strangermsg == 'm Here' or strangermsg == 'm here'):
+  elif (strangermsglower == 'm' or strangermsglower == '.m' or strangermsglower == 'm.' or strangermsglower == 'hai m' or strangermsglower == 'hi m' or strangermsglower == 'm hai' or strangermsglower == 'm hi' or strangermsglower == 'helo m' or strangermsglower == 'hello m' or strangermsglower == 'm here' or strangermsglower == '♂️' or strangermsglower == 'm ♂️' or strangermsglower == 'm♂️' or strangermsglower == '♂️m'):
     disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
     action = ActionChains(driver)
     for i in range(3):
@@ -149,9 +150,39 @@ def whoami():
   # message send button
   msgsend_btn = driver.find_element(By.CSS_SELECTOR, "button.sendbtn")
   msgsend_btn.click()
-  sleep(5)
-  print("Redirected to stranger disconnect()")
-  strangerdisconnect()
+  # sleep(5)
+  # print("Redirected to stranger disconnect()")
+  print("Redirected to checktext2()")
+  checktext2()
+  # strangerdisconnect()
+
+def checktext2():
+  print("Entered to checktext2 fun()")
+  try:
+    strangertext2_path = WebDriverWait(driver, 10).until(
+      # stranger message path
+      EC.visibility_of_element_located((By.XPATH, "/html/body/div[5]/div/div/div[1]/div[1]/div/div[6]/p/span"))
+    )
+  except TimeoutException:
+    print("Stranger not replied for 10 sec")
+    print("Redirected to strangerdisconnect() from checktext()")
+    strangerdisconnect()
+  strangermsg2 = strangertext2_path.text
+  strangermsg2lower = strangermsg2.lower()
+  print("Stranger says : " + strangermsg2lower)
+  if (strangermsg2lower == 'f' or strangermsg2lower == 'hai f' or strangermsg2lower == 'f hai' or strangermsg2lower == 'f here' or strangermsg2lower == 'hello f' or strangermsg2lower == 'helo f' or strangermsg2lower == '.f' or strangermsg2lower == 'f.' or strangermsg2lower == 'hi f' or strangermsg2lower == 'f hi' or strangermsg2lower == 'f,hai' or strangermsg2lower == 'f, hai' or strangermsg2lower == 'f,hi' or strangermsg2lower == 'f, hi' or strangermsg2lower == 'f here' or strangermsg2lower == '♀️' or strangermsg2lower == 'f ♀️' or strangermsg2lower == '♀️ f'):
+    playsound('beep_beep.mp3')
+    print("An F found")
+    exit()
+  elif (strangermsg2lower == 'm' or strangermsg2lower == '.m' or strangermsg2lower == 'm.' or strangermsg2lower == 'hai m' or strangermsg2lower == 'hi m' or strangermsg2lower == 'm hai' or strangermsg2lower == 'm hi' or strangermsg2lower == 'helo m' or strangermsg2lower == 'hello m' or strangermsg2lower == 'm here' or strangermsg2lower == '♂️' or strangermsg2lower == 'm ♂️' or strangermsg2lower == 'm♂️' or strangermsg2lower == '♂️m'):
+    disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
+    action = ActionChains(driver)
+    for i in range(3):
+      action.move_to_element(disconnect_btn).click()
+      action.perform()
+    print("Disconnected M found")
+    print("Redirected to checktextbox()")
+    checktextbox()
 
 # Check whether a stranger disconnected or not
 def strangerdisconnect():
