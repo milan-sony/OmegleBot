@@ -82,11 +82,11 @@ If responce of the stranger is M (Male) it will skip the stranger
 
 <img src="screenshots/img4.png">
 
-If the stranger skips without answering anything the bot will wait for 10 sec and skips
+If the stranger skips without answering anything, the bot will wait for 10 sec and skip the stranger
 
 <img src="screenshots/img5.png">
 
-If the responce of the stranger is F (Female) it will make a beep sound and the bot will sleep for 5 min and it will stop execution (time can be changed in the program)
+If the responce of the stranger is F (Female) it will make a beep sound and the bot will stop execution
 
 If stranger (F) skips you, you have to run the code again
 
@@ -94,7 +94,7 @@ If stranger (F) skips you, you have to run the code again
 
 You can change the messages according to your need
 
-Actually it's not 100% accurate there may be some faults while running the program (If any error occurs exit the code and run again)
+Actually it's not 100% accurate, there are some faults while running the program (If any bug occurs or not running properly, exit the code by clicking `ctrl + c` in the terminal and run again `python bot.py`)
 
 ## Future updates
 
