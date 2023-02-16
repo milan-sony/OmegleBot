@@ -123,13 +123,13 @@ def checktext():
   strangermsg = strangertext_path.text
   strangermsglower = strangermsg.lower()
   print("Stranger says : " + strangermsglower)
-  if (strangermsglower == 'f' or strangermsglower == 'hai f' or strangermsglower == 'f hai' or strangermsglower == 'f here' or strangermsglower == 'hello f' or strangermsglower == 'helo f' or strangermsglower == '.f' or strangermsglower == 'f.' or strangermsglower == 'hi f' or strangermsglower == 'f hi' or strangermsglower == 'f,hai' or strangermsglower == 'f, hai' or strangermsglower == 'f,hi' or strangermsglower == 'f, hi' or strangermsglower == 'f here' or strangermsglower == '♀️' or strangermsglower == 'f ♀️' or strangermsglower == '♀️ f'):
+  if (strangermsglower == 'f' or strangermsglower == 'hai f' or strangermsglower == 'f hai' or strangermsglower == 'f here' or strangermsglower == 'hello f' or strangermsglower == 'helo f' or strangermsglower == '.f' or strangermsglower == 'f.' or strangermsglower == 'hi f' or strangermsglower == 'f hi' or strangermsglower == 'f,hai' or strangermsglower == 'f, hai' or strangermsglower == 'f,hi' or strangermsglower == 'f, hi' or strangermsglower == 'f here' or strangermsglower == '♀️' or strangermsglower == 'f ♀️' or strangermsglower == '♀️ f' or strangermsglower == 'female'):
     playsound('beep_beep.mp3')
     print("An F found")
     exit()
   elif(strangermsglower == 'hai' or strangermsglower == 'hi' or strangermsglower == 'hello' == strangermsglower == 'hey'):
     whoami()
-  elif (strangermsglower == 'm' or strangermsglower == '.m' or strangermsglower == 'm.' or strangermsglower == 'hai m' or strangermsglower == 'hi m' or strangermsglower == 'm hai' or strangermsglower == 'm hi' or strangermsglower == 'helo m' or strangermsglower == 'hello m' or strangermsglower == 'm here' or strangermsglower == '♂️' or strangermsglower == 'm ♂️' or strangermsglower == 'm♂️' or strangermsglower == '♂️m'):
+  elif (strangermsglower == 'm' or strangermsglower == '.m' or strangermsglower == 'm.' or strangermsglower == 'hai m' or strangermsglower == 'hi m' or strangermsglower == 'm hai' or strangermsglower == 'm hi' or strangermsglower == 'helo m' or strangermsglower == 'hello m' or strangermsglower == 'm here' or strangermsglower == '♂️' or strangermsglower == 'm ♂️' or strangermsglower == 'm♂️' or strangermsglower == '♂️m' or strangermsglower == 'male'):
     disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
     action = ActionChains(driver)
     for i in range(3):
@@ -170,11 +170,11 @@ def checktext2():
   strangermsg2 = strangertext2_path.text
   strangermsg2lower = strangermsg2.lower()
   print("Stranger says : " + strangermsg2lower)
-  if (strangermsg2lower == 'f' or strangermsg2lower == 'hai f' or strangermsg2lower == 'f hai' or strangermsg2lower == 'f here' or strangermsg2lower == 'hello f' or strangermsg2lower == 'helo f' or strangermsg2lower == '.f' or strangermsg2lower == 'f.' or strangermsg2lower == 'hi f' or strangermsg2lower == 'f hi' or strangermsg2lower == 'f,hai' or strangermsg2lower == 'f, hai' or strangermsg2lower == 'f,hi' or strangermsg2lower == 'f, hi' or strangermsg2lower == 'f here' or strangermsg2lower == '♀️' or strangermsg2lower == 'f ♀️' or strangermsg2lower == '♀️ f'):
+  if (strangermsg2lower == 'f' or strangermsg2lower == 'hai f' or strangermsg2lower == 'f hai' or strangermsg2lower == 'f here' or strangermsg2lower == 'hello f' or strangermsg2lower == 'helo f' or strangermsg2lower == '.f' or strangermsg2lower == 'f.' or strangermsg2lower == 'hi f' or strangermsg2lower == 'f hi' or strangermsg2lower == 'f,hai' or strangermsg2lower == 'f, hai' or strangermsg2lower == 'f,hi' or strangermsg2lower == 'f, hi' or strangermsg2lower == 'f here' or strangermsg2lower == '♀️' or strangermsg2lower == 'f ♀️' or strangermsg2lower == '♀️ f' or strangermsg2lower == 'female'):
     playsound('beep_beep.mp3')
     print("An F found")
     exit()
-  elif (strangermsg2lower == 'm' or strangermsg2lower == '.m' or strangermsg2lower == 'm.' or strangermsg2lower == 'hai m' or strangermsg2lower == 'hi m' or strangermsg2lower == 'm hai' or strangermsg2lower == 'm hi' or strangermsg2lower == 'helo m' or strangermsg2lower == 'hello m' or strangermsg2lower == 'm here' or strangermsg2lower == '♂️' or strangermsg2lower == 'm ♂️' or strangermsg2lower == 'm♂️' or strangermsg2lower == '♂️m'):
+  elif (strangermsg2lower == 'm' or strangermsg2lower == '.m' or strangermsg2lower == 'm.' or strangermsg2lower == 'hai m' or strangermsg2lower == 'hi m' or strangermsg2lower == 'm hai' or strangermsg2lower == 'm hi' or strangermsg2lower == 'helo m' or strangermsg2lower == 'hello m' or strangermsg2lower == 'm here' or strangermsg2lower == '♂️' or strangermsg2lower == 'm ♂️' or strangermsg2lower == 'm♂️' or strangermsg2lower == '♂️m' or strangermsg2lower == 'male'):
     disconnect_btn = driver.find_element(By.CSS_SELECTOR, 'button.disconnectbtn')
     action = ActionChains(driver)
     for i in range(3):
